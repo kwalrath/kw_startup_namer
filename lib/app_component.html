@@ -1,0 +1,12 @@
+
+
+<material-button (trigger)="generateNames()">
+    <glyph icon="lightbulb_outline"></glyph>
+    Get new ideas
+</material-button>
+
+<material-list>
+    <material-list-item *ngFor="let item of names">
+        <span class="first">{{item.first}}</span>{{item.second}}.com
+    </material-list-item>
+</material-list>
