@@ -33,10 +33,8 @@ class AppComponent implements OnInit {
   void toggleSavedState(WordPair name) {
     if (savedNames.contains(name)) {
       removeFromSaved(name);
-      print(savedNames);
       return;
     }
     savedNames.add(name);
-    print(savedNames);
   }
 }
