@@ -26,6 +26,10 @@ class AppComponent implements OnInit {
     names = generateWordPairs().take(5).toList();
   }
 
+  void addToSaved(WordPair name) {
+    savedNames.add(name);
+  }
+
   void removeFromSaved(WordPair name) {
     savedNames.remove(name);
   }
@@ -35,6 +39,6 @@ class AppComponent implements OnInit {
       removeFromSaved(name);
       return;
     }
-    savedNames.add(name);
+    addToSaved(name);
   }
 }
